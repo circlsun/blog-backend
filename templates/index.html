@@ -7,10 +7,12 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Sensive Blog - Home</title>
   <link rel="icon" href="{% static 'img/favicon.png' %}" type="image/png">
-
   <link rel="stylesheet" href="{% static 'styles.min.css' %}">
 </head>
 <body>
+  {% for post in most_popular_posts %}
+    <p> {{post.title}}<br>
+  {% endfor %}
   <!--================Header Menu Area =================-->
   <header class="header_area">
     <div class="main_menu">

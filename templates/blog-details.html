@@ -7,7 +7,6 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Remake Barber - Blog Details</title>
 	<link rel="icon" href="{% static 'img/favicon.png' %}" type="image/png">
-
   <link rel="stylesheet" href="{% static 'styles.min.css' %}">
 </head>
 <body>
@@ -26,7 +25,7 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
             <ul class="nav navbar-nav menu_nav justify-content-center">
-              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href={% url 'index' %}>Home</a></li>
               <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right navbar-social">
@@ -60,8 +59,6 @@
   </section>
   <!--================ Hero sm Banner end =================-->    
 
-
-  
 
   <!--================ Start Blog Post Area =================-->
   <section class="blog-post-area section-margin">

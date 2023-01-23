@@ -30,10 +30,10 @@
               <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right navbar-social">
-              <li><a href="#"><i class="ti-facebook"></i></a></li>
-              <li><a href="#"><i class="ti-twitter-alt"></i></a></li>
-              <li><a href="#"><i class="ti-instagram"></i></a></li>
-              <li><a href="#"><i class="ti-skype"></i></a></li>
+              <li><a href={% url 'post_detail' slug=post.slug %}><i class="ti-facebook"></i></a></li>
+              <li><a href={% url 'post_detail' slug=post.slug %}><i class="ti-twitter-alt"></i></a></li>
+              <li><a href={% url 'post_detail' slug=post.slug %}><i class="ti-instagram"></i></a></li>
+              <li><a href={% url 'post_detail' slug=post.slug %}><i class="ti-skype"></i></a></li>
             </ul>
           </div> 
         </div>
@@ -102,15 +102,15 @@
                     <img class="img-fluid" src="{% static 'img/banner/blog.png' %}" alt="">
                   {% endif %}
                   <ul class="thumb-info"; style="max-width: 550px">
-                    <li><a href="#"><i class="ti-user"></i>{{post.author}}</a></li>
-                    <li><a href="#"><i class="ti-notepad"></i>{{post.published_at}}</a></li>
-                    <li><a href="#"><i class="ti-themify-favicon"></i>{{post.comments_amount}} Comments </a></li>
+                    <li><a href={% url 'post_detail' slug=post.slug %}><i class="ti-user"></i>{{post.author}}</a></li>
+                    <li><a href={% url 'post_detail' slug=post.slug %}><i class="ti-notepad"></i>{{post.published_at}}</a></li>
+                    <li><a href={% url 'post_detail' slug=post.slug %}><i class="ti-themify-favicon"></i>{{post.comments_amount}} Comments </a></li>
                   </ul>
                 </div>
                 <div class="details mt-20">
                   <h3>{{post.title}}</h3>
                   <p>{{post.text|truncatechars:200}}</p>
-                  <a class="button" href="#">Read More <i class="ti-arrow-right"></i></a>
+                  <a class="button" href={% url 'post_detail' slug=post.slug %}>Read More <i class="ti-arrow-right"></i></a>
                 </div>
               </div>
 
@@ -121,14 +121,14 @@
                   <nav class="blog-pagination justify-content-center d-flex">
                       <ul class="pagination">
                           <li class="page-item">
-                              <a href="#" class="page-link" aria-label="Previous">
+                              <a href={% url 'post_detail' slug=post.slug %} class="page-link" aria-label="Previous">
                                   <span aria-hidden="true">
                                       <i class="ti-angle-left"></i>
                                   </span>
                               </a>
                           </li>
-                          <li class="page-item active"><a href="#" class="page-link">1</a></li>
-                          <li class="page-item"><a href="#" class="page-link">2</a></li>
+                          <li class="page-item active"><a href={% url 'post_detail' slug=post.slug %} class="page-link">1</a></li>
+                          <li class="page-item"><a href={% url 'post_detail' slug=post.slug %} class="page-link">2</a></li>
                           <li class="page-item">
                               <a href="#" class="page-link" aria-label="Next">
                                   <span aria-hidden="true">
@@ -215,16 +215,16 @@
             <h6>Follow Us</h6>
             <p>Let us be social</p>
             <div class="footer-social d-flex align-items-center">
-              <a href="#">
+              <a href={% url 'post_detail' slug=post.slug %}>
                 <i class="fab fa-facebook-f"></i>
               </a>
-              <a href="#">
+              <a href={% url 'post_detail' slug=post.slug %}>
                 <i class="fab fa-twitter"></i>
               </a>
-              <a href="#">
+              <a href={% url 'post_detail' slug=post.slug %}>
                 <i class="fab fa-dribbble"></i>
               </a>
-              <a href="#">
+              <a href={% url 'post_detail' slug=post.slug %}>
                 <i class="fab fa-behance"></i>
               </a>
             </div>
